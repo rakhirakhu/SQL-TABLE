@@ -1,0 +1,174 @@
+CREATE TABLE registration1(
+R_Id INT PRIMARY KEY,
+Last_Name VARCHAR(255),
+First_Name VARCHAR(255),
+DOB DATE,
+R_Age INT,
+Gender Varchar(255),
+R_Number VARCHAR(255),
+Email VARCHAR(255),
+R_Address VARCHAR(255),
+R_State VARCHAR(255),
+R_City VARCHAR(255)
+);
+
+INSERT INTO registration1(
+R_Id,
+Last_Name,
+First_Name,
+DOB,
+R_Age,
+Gender,
+R_Number,
+Email,
+R_Address,
+R_State,
+R_City
+)
+
+VALUES(
+1,
+'MM',
+'Anu',
+'1999-09-06',
+23,
+'female',
+'9898976543',
+'ammu@gmail.com',
+'Home11',
+'Kerala',
+'kochi'
+
+);
+GO
+
+INSERT INTO registration1(
+R_Id,
+Last_Name,
+First_Name,
+DOB,
+R_Age,
+Gender,
+R_Number,
+Email,
+R_Address,
+R_State,
+R_City
+)
+
+VALUES(
+2,
+'kk',
+'Malu',
+'1998-09-06',
+24,
+'female',
+'7898976543',
+'kinn@gmail.com',
+'Home44',
+'Kerala',
+'kollam'
+
+);
+
+INSERT INTO registration1(
+R_Id,
+Last_Name,
+First_Name,
+DOB,
+R_Age,
+Gender,
+R_Number,
+Email,
+R_Address,
+R_State,
+R_City
+)
+
+VALUES(
+3,
+'nn',
+'Manu',
+'1999-09-22',
+24,
+'male',
+'8798976543',
+'manu@gmail.com',
+'Home66',
+'Kerala',
+'tvm'
+
+);
+
+INSERT INTO registration1(
+R_Id,
+Last_Name,
+First_Name,
+DOB,
+R_Age,
+Gender,
+R_Number,
+Email,
+R_Address,
+R_State,
+R_City
+)
+
+VALUES(
+4,
+'as',
+'karth',
+'1998-04-06',
+25,
+'male',
+'7798976543',
+'karthi@gmail.com',
+'Home98',
+'Kerala',
+'tvm'
+
+);
+
+INSERT INTO registration1(
+R_Id,
+Last_Name,
+First_Name,
+DOB,
+R_Age,
+Gender,
+R_Number,
+Email,
+R_Address,
+R_State,
+R_City
+)
+
+VALUES(
+5,
+'kk',
+'arunima',
+'1999-11-06',
+24,
+'female',
+'6898976543',
+'ima@gmail.com',
+'Home771',
+'Kerala',
+'kollam'
+
+);
+
+--//UPDATE//--
+
+UPDATE registration1
+SET R_City='Tvm'
+WHERE R_Address='Home84';
+
+
+--//SELECT//--
+SELECT *
+FROM registration1
+
+--//DELETE//--
+DELETE FROM registration1
+WHERE First_Name='Malu'

@@ -1,0 +1,146 @@
+CREATE DATABASE joins
+
+USE joins;
+
+CREATE TABLE fruits(
+Id INT PRIMARY KEY,
+f_Name VARCHAR(255),
+f_Color VARCHAR(255),
+f_Total VARCHAR(255)
+);
+
+INSERT INTO fruits(
+Id,
+f_Name,
+f_Color,
+F_Total
+)
+VALUES(
+1,
+'Orange',
+'Orange',
+12
+);
+GO
+
+INSERT INTO fruits(
+Id,
+f_Name,
+f_Color,
+F_Total
+)
+VALUES(
+2,
+'Apple',
+'Red',
+18
+);
+GO
+
+INSERT INTO fruits(
+Id,
+f_Name,
+f_Color,
+F_Total
+)
+VALUES(
+3,
+'Mango',
+'Yellow',
+10
+);
+GO
+
+INSERT INTO fruits(
+Id,
+f_Name,
+f_Color,
+F_Total
+)
+VALUES(
+4,
+'kiwi',
+'Green',
+18
+);
+GO
+
+CREATE TABLE vegetables(
+Id INT PRIMARY KEY,
+v_Name VARCHAR(255),
+v_Color VARCHAR(255),
+v_Total VARCHAR(255)
+);
+
+INSERT INTO vegetables(
+Id,
+v_Name,
+v_Color,
+v_Total
+)
+VALUES(
+1,
+'Tomato',
+'Red',
+18
+);
+INSERT INTO vegetables(
+Id,
+v_Name,
+v_Color,
+v_Total
+)
+VALUES(
+2,
+'Brinjal',
+'Violet',
+22
+);
+INSERT INTO vegetables(
+Id,
+v_Name,
+v_Color,
+v_Total
+)
+VALUES(
+3,
+'Crrot',
+'Orange',
+17
+);
+INSERT INTO vegetables(
+Id,
+v_Name,
+v_Color,
+v_Total
+)
+VALUES(
+4,
+'chlli',
+'Green',
+18
+);
+
+
+
+--//INNER//--
+SELECT f.*, v.*
+FROM fruits f
+INNER JOIN vegetables v ON f.f_Color=v.v_Color;
+
+--//LEFT//--
+SELECT f.f_Name,v.v_Name
+FROM fruits f
+LEFT JOIN vegetables v ON f.Id = v.Id;
+
+--//RIGHT//--
+SELECT f.f_Name,v.v_Name
+FROM fruits f
+RIGHT JOIN vegetables v ON f.f_Color=v.v_Color;
+
+--//FULL OUTER//--
+SELECT f.*, v.*
+FROM fruits f
+FULL OUTER JOIN vegetables v ON f.Id = v.Id;
+
+

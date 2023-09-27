@@ -1,0 +1,150 @@
+CREATE DATABASE employee
+
+USE employee;
+
+--//CREATE//--
+CREATE TABLE employee1(
+  Em_Id INT PRIMARY KEY,
+  First_Name VARCHAR(255),
+  Last_Name VARCHAR(255),
+  Salary INT
+);
+--//INSERT//--
+INSERT INTO employee1(
+Em_Id,
+First_Name,
+Last_Name,
+Salary
+)
+VALUES(
+1,
+'Akhil',
+'Joseph',
+15000
+);
+GO
+
+INSERT INTO employee1(
+Em_Id,
+First_Name,
+Last_Name,
+Salary
+)
+VALUES(
+2,
+'Manju',
+'Anand',
+28000
+);
+GO
+
+INSERT INTO employee1(
+Em_Id,
+First_Name,
+Last_Name,
+Salary
+)
+VALUES(
+3,
+'Femi',
+'Binu',
+35000
+);
+GO
+
+INSERT INTO employee1(
+Em_Id,
+First_Name,
+Last_Name,
+Salary
+)
+VALUES(
+4,
+'kiran',
+'Aravindh',
+18000
+);
+GO
+
+INSERT INTO employee1(
+Em_Id,
+First_Name,
+Last_Name,
+Salary
+)
+VALUES(
+5,
+'Arjun',
+'KK',
+15000
+);
+GO
+
+INSERT INTO employee1(
+Em_Id,
+First_Name,
+Last_Name,
+Salary
+)
+VALUES(
+6,
+'Sam',
+'Joy',
+50000
+);
+GO
+
+INSERT INTO employee1(
+Em_Id,
+First_Name,
+Last_Name,
+Salary
+)
+VALUES(
+7,
+'manu',
+'Anandh',
+55000
+);
+GO
+
+INSERT INTO employee1(
+Em_Id,
+First_Name,
+Last_Name,
+Salary
+)
+VALUES(
+8,
+'Ani',
+'Joseph',
+85000
+);
+GO
+
+INSERT INTO employee1(
+Em_Id,
+First_Name,
+Last_Name,
+Salary
+)
+VALUES(
+9,
+'Aswin',
+'S',
+79000
+);
+GO
+--//SELECT//--
+SELECT *
+FROM employee1
+GO
+
+--//SECOND HGHEST SALARY//--
+SELECT DISTINCT Salary
+FROM employee1 e1
+WHERE 2 = (
+  SELECT COUNT(DISTINCT Salary)
+  FROM employee1 e2
+  WHERE e2.Salary>=e1.Salary
+);

@@ -1,0 +1,98 @@
+
+CREATE TABLE department2(
+D_Id INT PRIMARY KEY,
+First_Name VARCHAR(255),
+Last_Name VARCHAR(255),
+Department VARCHAR(255)
+);
+GO
+
+--//INSERT//--
+INSERT INTO department2(
+D_Id,
+First_Name,
+Last_Name,
+Department
+)
+VALUES(
+1,
+'Aswin',
+'s',
+'BTECH'
+);
+GO 
+INSERT INTO department2(
+D_Id,
+First_Name,
+Last_Name,
+Department
+)
+VALUES(
+2,
+'Manju',
+'Anandh',
+'BTECH'
+);
+GO 
+
+INSERT INTO department2(
+D_Id,
+First_Name,
+Last_Name,
+Department
+)
+VALUES(
+3,
+'Sam',
+'Jos',
+'MCA'
+);
+GO 
+INSERT INTO department2(
+D_Id,
+First_Name,
+Last_Name,
+Department
+)
+VALUES(
+4,
+'Ammu',
+'MM',
+'BCA'
+);
+GO 
+INSERT INTO department2(
+D_Id,
+First_Name,
+Last_Name,
+Department
+)
+VALUES(
+5,
+'Kiran',
+'Mohan',
+'MTECH'
+);
+GO 
+INSERT INTO department2(
+D_Id,
+First_Name,
+Last_Name,
+Department
+)
+VALUES(
+6,
+'Nidha',
+'Varma',
+'MTECH'
+);
+GO 
+
+--//SELECT//--
+SELECT *
+FROM department2
+
+--//DEPARTMENTS//--
+SELECT Department, COUNT(*) as NumberOfEmployees
+FROM department2
+GROUP BY Department;
